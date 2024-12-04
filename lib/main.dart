@@ -1,14 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:untitled5/presentation/screens/task.dart';
-import 'package:untitled5/presentation/widgets/action_list_widget.dart';
-import 'package:untitled5/presentation/widgets/tast_detlis_widget.dart';
-
-import 'config/theme/theme_manager.dart';
-import 'data/Repository/task_repository_imp.dart';
-import 'data/model/task_details.dart';
-import 'domain/Entities/task.dart';
-import 'domain/Repository/task_repository.dart';
-import 'domain/Usecase/get_task_by_id.dart';
 
 void main()async {
 

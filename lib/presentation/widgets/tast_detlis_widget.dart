@@ -58,6 +58,7 @@ class TaskDetailsWidget extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+
                         Text(
                           'project name',
                           style: TextStyle(color:Colors.black),

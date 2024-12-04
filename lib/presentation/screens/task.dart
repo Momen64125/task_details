@@ -34,30 +34,30 @@ class Task extends StatelessWidget {
 
             return const Center(child: CircularProgressIndicator());
           } else if (snapshot.hasError) {
-            // التعامل مع الأخطاء
+
             return Center(child: Text('Error: ${snapshot.error}'));
           } else if (snapshot.hasData) {
-            // البيانات جاهزة
+
             final taskDetails = snapshot.data!;
             return Column(
               children: [
-                // تمرير البيانات إلى TaskDetailsWidget
+
                 TaskDetailsWidget(
                   task: taskDetails.name,
-                  status: 'In Progress',
+                  status: taskDetails.status,
                   doneActionsCount: 3,
                   totalActionsCount: taskDetails.actions.length,
                 ),
-                // تمرير قائمة الأفعال إلى ActionList
+
                 ActionList(
-                  status: 'In Progress',
+                  status: taskDetails.status,
                   scheduleId: taskDetails.id,
                   actionList: taskDetails.actions,
                 ),
               ],
             ).paddingAll(Sizes.size10);
           } else {
-            // في حال عدم وجود بيانات
+
             return const Center(child: Text('No data available.'));
           }
         },
