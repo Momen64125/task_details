@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../config/theme/color_system/app_colors.dart';
 import '../../config/theme/font_system/app_fonts.dart';
 import '../../config/theme/sizes_manager.dart';
 import '../../config/theme/styles_manager.dart';

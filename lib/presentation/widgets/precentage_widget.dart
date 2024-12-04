@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
+import '../../config/theme/sizes_manager.dart';
+
 
 class PercentageWidget extends StatelessWidget {
   final Color color;
@@ -21,8 +23,8 @@ class PercentageWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 70,
-      height: 60,
+      width: Sizes.size70,
+      height: Sizes.size60,
       child: FittedBox(
         child: CircularPercentIndicator(
           radius: 400.0,

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:untitled5/presentation/widgets/precentage_widget.dart';
 import 'package:untitled5/presentation/widgets/status_widget.dart';
 
+import '../../config/theme/sizes_manager.dart';
+
 class TaskDetailsWidget extends StatelessWidget {
   final String status;
   final int doneActionsCount;
@@ -19,7 +21,7 @@ class TaskDetailsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(15.0),
+      padding: const EdgeInsets.all(Sizes.size14),
       child: Container(
 
         decoration: BoxDecoration(

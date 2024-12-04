@@ -58,7 +58,8 @@ class ActionList extends StatelessWidget {
                       if (index == 0)
                       ImageWidget(actionItem: actionItem)
                       else if (index == 1)
-                        const AnswerWidget(
+                       const    AnswerWidget(
+
                          question: 'Answer the question immediately',
                          options: ['Choice one', 'Choice two', 'Choice three', 'Choice four'],
                        )

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:untitled5/config/theme/widget_manager.dart';
 import 'package:untitled5/presentation/widgets/sumbit_action_succsufl.dart';
 
+import '../../config/theme/font_system/app_fonts.dart';
 import '../../config/theme/sizes_manager.dart';
+import '../../config/theme/styles_manager.dart';
 
 class CheckIfOk extends StatefulWidget {
   final String question;
@@ -25,16 +28,29 @@ class _CheckIfOkState extends State<CheckIfOk> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Check if Ok',
+              style: StylesManager.bold(fontSize: AppFonts.font.xXLarge),
+            ).paddingOnly(top: Sizes.size10, bottom: Sizes.size10),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);  // Closing the current screen
+              },
+              child: const Icon(Icons.close),
+            ),
+          ],
+        ),
+
         Text(
           widget.question,
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        const SizedBox(height: 16),
+          style: StylesManager.bold(fontSize: AppFonts.font.large),
+        ).paddingOnly(top: Sizes.size10, bottom: Sizes.size4),
 
-        // Display the checkbox with the option text
+
+
         Row(
           children: [
             Radio<bool>(
@@ -55,7 +71,7 @@ class _CheckIfOkState extends State<CheckIfOk> {
           ],
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 20.0, left: 10.0, right: 10.0, bottom: 20.0),
+          padding: const EdgeInsets.all(Sizes.size20),
           child: Container(
             width: double.infinity,
             height: Sizes.size48,
@@ -68,9 +84,9 @@ class _CheckIfOkState extends State<CheckIfOk> {
                 backgroundColor: Colors.blueAccent,
               ),
               onPressed: () {
-                Navigator.pop(context);  // Closing the current screen
+                Navigator.pop(context);
 
-                // Show success modal
+
                 showModalBottomSheet(
                   context: context,
                   showDragHandle: true,
@@ -85,6 +101,6 @@ class _CheckIfOkState extends State<CheckIfOk> {
           ),
         ),
       ],
-    );
+    ).paddingAll(Sizes.size20);
   }
 }

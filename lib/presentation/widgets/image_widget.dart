@@ -35,7 +35,7 @@ class ImageWidget extends StatelessWidget {
               ),
             ],
           ),
-          CameraWidget(),
+          const CameraWidget(),
           const SizedBox(height: Sizes.size20),  // Space between camera and note
           Text('Note', style: StylesManager.bold(fontSize: AppFonts.font.large))
               .paddingOnly(top: Sizes.size10, bottom: Sizes.size10),

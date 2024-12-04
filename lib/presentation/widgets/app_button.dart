@@ -26,11 +26,11 @@ class AppDefaultButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(Sizes.size8),
           ),
         ),
+        onPressed: onPressed,
         child: Text(
           text,
-          style: TextStyle(color: Colors.white), // Adding a style for the text
+          style: const TextStyle(color: Colors.white),
         ),
-        onPressed: onPressed,
       ),
     );
   }

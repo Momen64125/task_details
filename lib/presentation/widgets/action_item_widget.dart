@@ -31,7 +31,7 @@ class ActionItemWidget extends StatelessWidget {
           BoxShadow(
             color: Colors.grey.shade400,
             blurRadius: 4,
-            offset: Offset(4, 8), // Shadow position
+            offset: const Offset(4, 8), // Shadow position
           ),
         ],
         color: Colors.white,
@@ -62,11 +62,11 @@ class ActionItemWidget extends StatelessWidget {
                   ),
                 ],
               ),
-              contentPadding: EdgeInsets.symmetric(
+              contentPadding: const EdgeInsets.symmetric(
                 vertical: Sizes.size4*6,
                 horizontal: Sizes.size16,
               ),
-             trailing:StatusWidget(status: 'in progress'),
+             trailing:const StatusWidget(status: 'in progress'),
 
 
              ),

@@ -1,8 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:untitled5/config/theme/widget_manager.dart';
 import 'package:untitled5/presentation/widgets/sumbit_action_succsufl.dart';
 
+import '../../config/theme/font_system/app_fonts.dart';
 import '../../config/theme/sizes_manager.dart';
+import '../../config/theme/styles_manager.dart';
 
 class AnswerWidget extends StatefulWidget {
   final String question;
@@ -26,14 +29,26 @@ class _AnswerWidgetState extends State<AnswerWidget> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              " Answer Now",
+              style: StylesManager.bold(fontSize: AppFonts.font.xXLarge),
+            ).paddingOnly(top: Sizes.size10, bottom: Sizes.size10),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);  // Closing the current screen
+              },
+              child: const Icon(Icons.close),
+            ),
+          ],
+        ),
         // Display the question
         Text(
           widget.question,
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+          style: StylesManager.bold(fontSize: AppFonts.font.large),
+        ).paddingOnly(top: Sizes.size10, bottom: Sizes.size10),
         SizedBox(height: 16),
 
         // Display the options
@@ -98,6 +113,6 @@ class _AnswerWidgetState extends State<AnswerWidget> {
           ),
         ),
       ],
-    );
+    ).paddingAll( Sizes.size20);
   }
 }

@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:untitled5/config/theme/widget_manager.dart';
@@ -31,7 +31,7 @@ class SumbitActionSuccsufl extends StatelessWidget {
         ).paddingOnly(right: Sizes.size40, left: Sizes.size40),
         const SizedBox(height: Sizes.size10),
      Padding(
-      padding: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.all(Sizes.size20),
       child: Container(
        width: double.infinity,
        height:  Sizes.size48,
