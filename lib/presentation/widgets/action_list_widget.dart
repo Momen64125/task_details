@@ -8,6 +8,7 @@ import '../../config/theme/styles_manager.dart';
 import 'action_item_widget.dart';
 import 'answer_widget.dart';
 import 'chek_if_ok_widget.dart';
+import 'file_widget.dart';
 import 'image_widget.dart';
 
 class ActionList extends StatelessWidget {
@@ -56,7 +57,12 @@ class ActionList extends StatelessWidget {
                      return Wrap(
                       children: [
                       if (index == 0)
-                      ImageWidget(actionItem: actionItem)
+                      // ImageWidget(actionItem: actionItem)
+                        FileWidget(
+                         actionType: ' actionItem',
+                          scheduleId: scheduleId,
+
+                        )
                       else if (index == 1)
                        const    AnswerWidget(
 
