@@ -37,14 +37,14 @@ class AddFileWidget extends StatelessWidget {
         SnackBar(content: Text('Failed to pick files: $e')),
       );
     } finally {
-      isLoading?.call(false); // إيقاف مؤشر التحميل
+      isLoading?.call(false);
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Color(0x1D42FF),
+      color: Color(0xff1D42FF),
       child: InkWell(
         onTap: () => _pickFiles(context),
         child: Container(

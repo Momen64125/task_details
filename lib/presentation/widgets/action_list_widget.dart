@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:untitled5/config/theme/widget_manager.dart';
+import 'package:untitled5/presentation/widgets/voice_widget.dart';
 
 import '../../config/theme/font_system/app_fonts.dart';
 import '../../config/theme/sizes_manager.dart';
@@ -57,23 +58,21 @@ class ActionList extends StatelessWidget {
                      return Wrap(
                       children: [
                       if (index == 0)
-                      // ImageWidget(actionItem: actionItem)
-                        FileWidget(
-                         actionType: ' actionItem',
-                          scheduleId: scheduleId,
+                       ImageWidget(actionItem: actionItem)
 
-                        )
                       else if (index == 1)
                        const    AnswerWidget(
 
                          question: 'Answer the question immediately',
                          options: ['Choice one', 'Choice two', 'Choice three', 'Choice four'],
                        )
-                        else
+                        else if (index == 2)
                        const CheckIfOk(
                       question: 'Check it now if you finish it',
                          optionText: 'Check now',
-    ),
+    )   else
+                         FileWidget(actionType:  actionItem, scheduleId: scheduleId),
+
     ],
     );
                     }

@@ -71,7 +71,7 @@ class _FilesListWidgetState extends State<FilesListWidget> {
                         child: Icon(
                           Icons.close,
                           size: 20,
-                          color: Colors.red,
+
                         ).paddingAll(Sizes.size2),
                       ),
                     ),

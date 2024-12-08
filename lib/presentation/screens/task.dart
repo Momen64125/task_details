@@ -13,7 +13,7 @@ class Task extends StatelessWidget {
 
   final TaskRepository taskRepository = TaskRepositoryImp(
     TaskDetailsModel(
-      actions: ['Take a Photo', 'Answer now', 'Check if Ok'],
+      actions: ['Take a Photo', 'Answer now', 'Check if Ok','Upload File'],
       // id: 1,
       // name: 'Take a Photo',
     ),

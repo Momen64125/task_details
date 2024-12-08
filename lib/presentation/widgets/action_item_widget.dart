@@ -50,6 +50,8 @@ class ActionItemWidget extends StatelessWidget {
                         ? Icons.edit_note_outlined
                         : action == 'Take a Photo'
                         ? Icons.photo_outlined
+                        :action=='Upload File'?
+                         Icons.upload_file
                         : Icons.check_box_outlined,
                   ),
                   Text(

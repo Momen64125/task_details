@@ -36,20 +36,6 @@ class _FileWidgetState extends State<FileWidget> {
     super.dispose();
   }
 
-  void _submit() {
-    // You can send the data to a backend or process it here
-    print('Files: ${widget.media}');
-
-    // Navigate to success modal
-    showModalBottomSheet(
-      context: context,
-      showDragHandle: true,
-      isScrollControlled: true,
-      builder: (ctx) {
-        return const SumbitActionSuccsufl();
-      },
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -87,7 +73,19 @@ class _FileWidgetState extends State<FileWidget> {
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blueAccent,
               ),
-              onPressed: _submit,
+              onPressed:(){
+                print('Files: ${widget.media}');
+                Navigator.pop(context);
+                // Navigate to success modal
+                showModalBottomSheet(
+                  context: context,
+                  showDragHandle: true,
+                  isScrollControlled: true,
+                  builder: (ctx) {
+                    return const SumbitActionSuccsufl();
+                  },
+                );
+              },
               child: const Text('Submit'),
             ),
           ),
